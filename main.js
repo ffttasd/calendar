@@ -5,7 +5,7 @@
 class CalendarState {
     constructor() {
         this.currentDate = new Date();
-        this.view = 'month'; // 'month', 'week', 'day'
+        this.view = 'week'; // 'month', 'week', 'day'
         this.events = this.generateSampleEvents();
         this.selectedEvent = null;
         this.isEventModalOpen = false;
@@ -444,7 +444,7 @@ class ConfirmDialog {
 class CalendarApp {
     constructor() {
         this.state = new CalendarState();
-        this.state.view = 'day'; // 默认日视图
+        this.state.view = 'week'; // 默认周视图
         this.audioContext = null; // 音频上下文
         this.audioInitialized = false; // 音频是否已初始化
         this.pendingSounds = []; // 待播放的声音队列
